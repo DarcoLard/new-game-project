@@ -14,25 +14,25 @@ size = Vector2(106, 627)
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
-position = Vector2(50, -52)
+position = Vector2(27, -84)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(23, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(565, 810)
+position = Vector2(517, 1019)
 shape = SubResource("RectangleShape2D_fj7yv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-138, 349)
+position = Vector2(-380, 367)
 shape = SubResource("RectangleShape2D_tlwt5")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1188, 327)
+position = Vector2(1293, 330)
 shape = SubResource("RectangleShape2D_aqk2v")
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 11.0
-offset_top = 575.0
-offset_right = 1164.0
-offset_bottom = 811.0
+offset_left = -45.0
+offset_top = 788.0
+offset_right = 1108.0
+offset_bottom = 1024.0
