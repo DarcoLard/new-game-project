@@ -22,9 +22,24 @@ func _physics_process(delta):
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
-	
 	else:
 		
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	if velocity.y == 0:
+		if velocity.x==0:
+			$CollisionShape2D/AnimatedSprite2D.play("idle")
+		if velocity.x>0:
+			$CollisionShape2D/AnimatedSprite2D.play("walk right")
+		if velocity.x<0:
+			$CollisionShape2D/AnimatedSprite2D.play("walk left")
+
+	if velocity.y!=0:
+		if velocity.x==0:
+			$CollisionShape2D/AnimatedSprite2D.play("idle")
+		if velocity.x>0:
+			$CollisionShape2D/AnimatedSprite2D.play("jump right")
+		if velocity.x<0:
+			$CollisionShape2D/AnimatedSprite2D.play("jump left")
 
 	move_and_slide()

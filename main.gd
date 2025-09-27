@@ -11,5 +11,5 @@ func _on_play_buton_pressed() -> void:
 func _on_control_2_ready() -> void:
 	var control = $Control2
 	control.visible = false
-	await get_tree().create_timer(21.0).timeout
+	await get_tree().create_timer(1.0).timeout
 	control.visible = true
