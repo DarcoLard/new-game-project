@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d12a2c5qefjr2"]
+
+[ext_resource type="Texture2D" uid="uid://cqs4kk6av0vin" path="res://assets/shadow stanga.png" id="1_dj0l2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uivfv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_57mr5"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_uivfv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_57mr5")
+
+[node name="ShadowStanga" type="Sprite2D" parent="."]
+position = Vector2(-1.499999, -0.5000007)
+scale = Vector2(0.32673267, 0.33333334)
+texture = ExtResource("1_dj0l2")
