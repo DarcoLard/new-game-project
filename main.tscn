@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Script" path="res://Menutext.gd" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://csycpsxomwj4b" path="res://Menutext.gd" id="1_ig7tw"]
 
 [sub_resource type="Animation" id="Animation_ig7tw"]
 length = 20.0
@@ -95,7 +95,7 @@ offset_bottom = 490.0
 theme_override_font_sizes/normal_font_size = 25
 text = "Welcome, Player! My name is THE CREATOR.
 
-You must be thinking, \"Where am I? What am I doing here?\" Well, let me explain it to you.
+You must be thinking, \"Where am I? What am I doing here? blah blah blah...\". Well, let me explain it to you.
 
 You've been trapped inside the game. The only way out is by defeating the game. Unfortunately, because you are not part of the game, death is permanent. Good news, I was able to give you multiple chances. Bad news, you will have to sacrifice parts of you for that.
 
