@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://dntrdxjmytwn4"]
+
+[ext_resource type="Texture2D" uid="uid://c6m8bmbeiadwk" path="res://assets/craftpix-671123-free-halloween-2d-game-backgrounds/PNG/3_game_background/3_game_background.png" id="1_ksuqd"]
+
+[sub_resource type="GDScript" id="GDScript_ksuqd"]
+script/source = "extends Node
+"
+
+[node name="Background" type="Node2D"]
+script = SubResource("GDScript_ksuqd")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 0)
+
+[node name="3GameBackground" type="Sprite2D" parent="."]
+position = Vector2(579, 322)
+scale = Vector2(0.6010417, 0.59444445)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground2" type="Sprite2D" parent="."]
+position = Vector2(1733, 322)
+scale = Vector2(0.6010417, 0.59444445)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground3" type="Sprite2D" parent="."]
+position = Vector2(2887, 322)
+scale = Vector2(0.6010417, 0.59444445)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground4" type="Sprite2D" parent="."]
+position = Vector2(4041, 322)
+scale = Vector2(0.6010417, 0.59444445)
+texture = ExtResource("1_ksuqd")
