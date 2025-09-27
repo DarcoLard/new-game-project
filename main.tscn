@@ -1,37 +1,116 @@
-[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=5 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" path="res://Menutext.gd" id="1_ig7tw"]
+
+[sub_resource type="Animation" id="Animation_ig7tw"]
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_7dm0k"]
+resource_name = "text appear"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0xm2m"]
+_data = {
+&"RESET": SubResource("Animation_ig7tw"),
+&"text appear": SubResource("Animation_7dm0k")
+}
 
 [node name="Main Menu" type="Node2D"]
 
-[node name="Play buton" type="Button" parent="."]
-offset_left = 64.0
-offset_top = 386.8
-offset_right = 493.0
-offset_bottom = 641.8
-theme_override_font_sizes/font_size = 40
+[node name="Control2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 459.0
+offset_right = 1154.0
+offset_bottom = 642.0
+
+[node name="Play buton2" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1009055
+anchor_top = -2.5239227
+anchor_right = 0.1009055
+anchor_bottom = -2.5239227
+offset_left = 48.555054
+offset_top = 494.87784
+offset_right = 369.55505
+offset_bottom = 632.80835
+theme_override_font_sizes/font_size = 60
 text = "Play"
 metadata/_edit_use_anchors_ = true
 
-[node name="Quit buton" type="Button" parent="."]
-offset_left = 637.0
-offset_top = 386.0
-offset_right = 1066.0
-offset_bottom = 641.0
-theme_override_font_sizes/font_size = 40
+[node name="Quit buton2" type="Button" parent="Control2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.0061064246
+anchor_top = -2.5441592
+anchor_right = -0.0061064246
+anchor_bottom = -2.5441592
+offset_left = 580.0468
+offset_top = 498.58115
+offset_right = 917.0468
+offset_bottom = 636.5811
+theme_override_font_sizes/font_size = 60
 text = "Stay"
 metadata/_edit_use_anchors_ = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 1151.0
-offset_bottom = 479.0
-theme_override_font_sizes/normal_font_size = 21
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1154.0
+offset_bottom = 470.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 1164.0
+offset_bottom = 490.0
+theme_override_font_sizes/normal_font_size = 25
 text = "Welcome, Player! My name is THE CREATOR.
 
 You must be thinking, \"Where am I? What am I doing here?\" Well, let me explain it to you.
 
-You've been trapped inside the game. The only way out is by defeating the game. Unfortunately, because you are not part of the game, death is permanent. But good news, I was able to give you multiple chances, but you will have to sacrifice parts of you for that.
+You've been trapped inside the game. The only way out is by defeating the game. Unfortunately, because you are not part of the game, death is permanent. Good news, I was able to give you multiple chances. Bad news, you will have to sacrifice parts of you for that.
 
 Now you have a choice to make.
 
 1. Stay in the game and live your life here.
 
-2. Play and maybe die piece by piece trying. :)"
+2. Play with the possibility of dying piece by piece trying. :)"
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../RichTextLabel")
+libraries = {
+&"": SubResource("AnimationLibrary_0xm2m")
+}
+script = ExtResource("1_ig7tw")
