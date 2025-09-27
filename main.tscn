@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=6 format=3 uid="uid://cqow47bch5ocs"]
 
+[ext_resource type="Script" uid="uid://crtdv5djku0ij" path="res://main.gd" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://csycpsxomwj4b" path="res://Menutext.gd" id="1_ig7tw"]
 
 [sub_resource type="Animation" id="Animation_ig7tw"]
@@ -40,6 +41,7 @@ _data = {
 }
 
 [node name="Main Menu" type="Node2D"]
+script = ExtResource("1_0xm2m")
 
 [node name="Control2" type="Control" parent="."]
 layout_mode = 3
@@ -48,22 +50,22 @@ offset_top = 459.0
 offset_right = 1154.0
 offset_bottom = 642.0
 
-[node name="Play buton2" type="Button" parent="Control2"]
+[node name="Play buton" type="Button" parent="Control2"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1009055
 anchor_top = -2.5239227
 anchor_right = 0.1009055
 anchor_bottom = -2.5239227
-offset_left = 48.555054
+offset_left = 83.55505
 offset_top = 494.87784
-offset_right = 369.55505
-offset_bottom = 632.80835
+offset_right = 420.55505
+offset_bottom = 632.8778
 theme_override_font_sizes/font_size = 60
 text = "Play"
 metadata/_edit_use_anchors_ = true
 
-[node name="Quit buton2" type="Button" parent="Control2"]
+[node name="Stay buton" type="Button" parent="Control2"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.0061064246
@@ -93,6 +95,7 @@ offset_top = 11.0
 offset_right = 1164.0
 offset_bottom = 490.0
 theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 30
 text = "Welcome, Player! My name is THE CREATOR.
 
 You must be thinking, \"Where am I? What am I doing here? blah blah blah...\". Well, let me explain it to you.
@@ -102,7 +105,6 @@ You've been trapped inside the game. The only way out is by defeating the game. 
 Now you have a choice to make.
 
 1. Stay in the game and live your life here.
-
 2. Play with the possibility of dying piece by piece trying. :)"
 visible_characters = 0
 visible_characters_behavior = 1
@@ -114,3 +116,6 @@ libraries = {
 &"": SubResource("AnimationLibrary_0xm2m")
 }
 script = ExtResource("1_ig7tw")
+
+[connection signal="pressed" from="Control2/Play buton" to="." method="_on_play_buton_pressed"]
+[connection signal="pressed" from="Control2/Stay buton" to="." method="_on_stay_buton_pressed"]
