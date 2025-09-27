@@ -57,11 +57,11 @@ animations = [{
 script = ExtResource("1_vlldt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(470, 609)
+position = Vector2(485, 551)
 shape = SubResource("CapsuleShape2D_dm7nj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(-8, -3)
+position = Vector2(-5, 4)
 scale = Vector2(0.2, 0.189)
 sprite_frames = SubResource("SpriteFrames_3mea3")
-animation = &"death"
+animation = &"idle"
