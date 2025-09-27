@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqow47bch5ocs"]
+[gd_scene load_steps=5 format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Script" uid="uid://cekaduo22sbmo" path="res://Menutext.gd" id="1_ig7tw"]
 
 [sub_resource type="Animation" id="Animation_ig7tw"]
 length = 20.0
@@ -39,46 +41,57 @@ _data = {
 
 [node name="Main Menu" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Control2" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 1153.0
-offset_bottom = 647.0
+offset_top = 459.0
+offset_right = 1154.0
+offset_bottom = 642.0
 
-[node name="Play buton" type="Button" parent="Control"]
+[node name="Play buton2" type="Button" parent="Control2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.013876843
-anchor_top = 0.17805257
-anchor_right = 0.02254987
-anchor_bottom = -0.01854714
-offset_left = 64.0
-offset_top = 386.8
-offset_right = 493.0
-offset_bottom = 641.8
+anchor_left = 0.1009055
+anchor_top = -2.5239227
+anchor_right = 0.1009055
+anchor_bottom = -2.5239227
+offset_left = 48.555054
+offset_top = 494.87784
+offset_right = 369.55505
+offset_bottom = 632.80835
 theme_override_font_sizes/font_size = 60
 text = "Play"
 metadata/_edit_use_anchors_ = true
 
-[node name="Quit buton" type="Button" parent="Control"]
+[node name="Quit buton2" type="Button" parent="Control2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.05117086
-anchor_top = 0.1854714
-anchor_right = -0.060711186
-anchor_bottom = -0.023183925
-offset_left = 637.0
-offset_top = 386.0
-offset_right = 1066.0
-offset_bottom = 641.0
+anchor_left = -0.0061064246
+anchor_top = -2.5441592
+anchor_right = -0.0061064246
+anchor_bottom = -2.5441592
+offset_left = 580.0468
+offset_top = 498.58115
+offset_right = 917.0468
+offset_bottom = 636.5811
 theme_override_font_sizes/font_size = 60
 text = "Stay"
 metadata/_edit_use_anchors_ = true
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 1149.0
+offset_bottom = 465.0
+
 [node name="RichTextLabel" type="RichTextLabel" parent="Control"]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 479.0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 1164.0
+offset_bottom = 490.0
 theme_override_font_sizes/normal_font_size = 25
 text = "Welcome, Player! My name is THE CREATOR.
 
@@ -100,3 +113,4 @@ root_node = NodePath("../RichTextLabel")
 libraries = {
 &"": SubResource("AnimationLibrary_0xm2m")
 }
+script = ExtResource("1_ig7tw")
