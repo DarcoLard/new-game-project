@@ -1,47 +1,122 @@
-[gd_scene load_steps=7 format=3 uid="uid://ckavqb25bdaul"]
+[gd_scene load_steps=10 format=4 uid="uid://ckavqb25bdaul"]
 
 [ext_resource type="PackedScene" uid="uid://5wfaiuixi4mu" path="res://Player/Player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://dntrdxjmytwn4" path="res://parallax_background.tscn" id="1_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://cmys6fox7dgdy" path="res://assets/ground.png" id="1_tlwt5"]
 
 [sub_resource type="GDScript" id="GDScript_tlwt5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fj7yv"]
-size = Vector2(2669, 476)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_036b0"]
+size = Vector2(6957, 61)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlwt5"]
-size = Vector2(239, 594)
+size = Vector2(49, 594)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aqk2v"]
-size = Vector2(106, 627)
+size = Vector2(282, 627)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tlwt5"]
+texture = ExtResource("1_tlwt5")
+texture_region_size = Vector2i(128, 128)
+0:16/0 = 0
+1:16/0 = 0
+2:16/0 = 0
+3:16/0 = 0
+4:16/0 = 0
+5:16/0 = 0
+6:16/0 = 0
+7:16/0 = 0
+0:17/0 = 0
+1:17/0 = 0
+2:17/0 = 0
+3:17/0 = 0
+4:17/0 = 0
+5:17/0 = 0
+6:17/0 = 0
+7:17/0 = 0
+0:18/0 = 0
+1:18/0 = 0
+2:18/0 = 0
+3:18/0 = 0
+4:18/0 = 0
+5:18/0 = 0
+6:18/0 = 0
+7:18/0 = 0
+0:19/0 = 0
+1:19/0 = 0
+2:19/0 = 0
+3:19/0 = 0
+4:19/0 = 0
+5:19/0 = 0
+6:19/0 = 0
+7:19/0 = 0
+0:20/0 = 0
+1:20/0 = 0
+2:20/0 = 0
+3:20/0 = 0
+4:20/0 = 0
+5:20/0 = 0
+6:20/0 = 0
+7:20/0 = 0
+0:21/0 = 0
+1:21/0 = 0
+2:21/0 = 0
+3:21/0 = 0
+4:21/0 = 0
+5:21/0 = 0
+6:21/0 = 0
+7:21/0 = 0
+0:22/0 = 0
+1:22/0 = 0
+2:22/0 = 0
+3:22/0 = 0
+4:22/0 = 0
+5:22/0 = 0
+6:22/0 = 0
+7:22/0 = 0
+0:23/0 = 0
+1:23/0 = 0
+2:23/0 = 0
+3:23/0 = 0
+4:23/0 = 0
+5:23/0 = 0
+6:23/0 = 0
+7:23/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_aqk2v"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_tlwt5")
 
 [node name="World" type="Node2D"]
 position = Vector2(1410, 561)
 script = SubResource("GDScript_tlwt5")
 
 [node name="Background" parent="." instance=ExtResource("1_fj7yv")]
-position = Vector2(-1417, -558)
+position = Vector2(-1417, -561)
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
-position = Vector2(-183, -644)
+position = Vector2(-167, -227)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(23, 8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(141, 253)
-shape = SubResource("RectangleShape2D_fj7yv")
+position = Vector2(2022.5, 42.5)
+shape = SubResource("RectangleShape2D_036b0")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-1317, -268)
+position = Vector2(-890, -270)
 shape = SubResource("RectangleShape2D_tlwt5")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1524, -267)
+position = Vector2(5628, -257)
 shape = SubResource("RectangleShape2D_aqk2v")
 
-[node name="Panel" type="Panel" parent="StaticBody2D"]
-offset_left = -1191.0
-offset_top = 15.0
-offset_right = 1477.0
-offset_bottom = 251.0
-metadata/_edit_use_anchors_ = true
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD5////AAAAAAIAAAD5//3/AAAAAAIAAAD5//7/AAAAAAIAAAD5//z/AAAAAAIAAAD5/wAAAAAAAAIAAAD5//v/AAAAAAIAAAD4/wAAAAAAAAIAAAD1//v/AAAAAAIAAAD1//z/AAAAAAIAAAD1//3/AAAAAAIAAAD1//7/AAAAAAIAAAD1////AAAAAAIAAAD1/wAAAAAAAAIAAAD2//v/AAAAAAIAAAD2//z/AAAAAAIAAAD2//3/AAAAAAIAAAD2//7/AAAAAAIAAAD2////AAAAAAIAAAD2/wAAAAAAAAIAAAD3//v/AAAAAAIAAAD3//z/AAAAAAIAAAD3//3/AAAAAAIAAAD3//7/AAAAAAIAAAD3////AAAAAAIAAAD3/wAAAAAAAAIAAAD4//v/AAAAAAIAAAD4//z/AAAAAAIAAAD4//3/AAAAAAIAAAD4//7/AAAAAAIAAAD4////AAAAAAIAAAA=")
+tile_set = SubResource("TileSet_aqk2v")
+rendering_quadrant_size = 128
+physics_quadrant_size = 128

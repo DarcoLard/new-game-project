@@ -13,21 +13,67 @@ script = SubResource("GDScript_ksuqd")
 scroll_scale = Vector2(0, 0)
 
 [node name="3GameBackground" type="Sprite2D" parent="."]
-position = Vector2(579, 322)
-scale = Vector2(0.6010417, 0.59444445)
+position = Vector2(579, 321.50003)
+scale = Vector2(0.6010417, 0.5953705)
 texture = ExtResource("1_ksuqd")
 
 [node name="3GameBackground2" type="Sprite2D" parent="."]
-position = Vector2(1733, 322)
-scale = Vector2(0.6010417, 0.59444445)
+position = Vector2(1733, 321.50006)
+scale = Vector2(0.6010417, 0.59537053)
 texture = ExtResource("1_ksuqd")
 
 [node name="3GameBackground3" type="Sprite2D" parent="."]
-position = Vector2(2887, 322)
-scale = Vector2(0.6010417, 0.59444445)
+position = Vector2(2887, 321.50003)
+scale = Vector2(0.6010417, 0.5953705)
 texture = ExtResource("1_ksuqd")
 
 [node name="3GameBackground4" type="Sprite2D" parent="."]
-position = Vector2(4041, 322)
-scale = Vector2(0.6010417, 0.59444445)
+position = Vector2(4041, 321.50003)
+scale = Vector2(0.6010417, 0.5953704)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground5" type="Sprite2D" parent="."]
+position = Vector2(5195, 321.5)
+scale = Vector2(0.6010417, 0.5953703)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground6" type="Sprite2D" parent="."]
+position = Vector2(6349, 322)
+scale = Vector2(0.6010417, 0.5953703)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground7" type="Sprite2D" parent="."]
+position = Vector2(577.00006, -321)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground8" type="Sprite2D" parent="."]
+position = Vector2(1727, -321.00003)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground9" type="Sprite2D" parent="."]
+position = Vector2(2877, -321)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground10" type="Sprite2D" parent="."]
+position = Vector2(4027, -321)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground11" type="Sprite2D" parent="."]
+position = Vector2(5177, -321)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
+texture = ExtResource("1_ksuqd")
+
+[node name="3GameBackground12" type="Sprite2D" parent="."]
+position = Vector2(6327, -321)
+rotation = 9.051164e-05
+scale = Vector2(0.5989585, -0.5953705)
 texture = ExtResource("1_ksuqd")
