@@ -1,12 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://5wfaiuixi4mu"]
+[gd_scene load_steps=11 format=3 uid="uid://5wfaiuixi4mu"]
 
 [ext_resource type="Script" uid="uid://bsdchtjltx8ym" path="res://Player/player.gd" id="1_vlldt"]
-[ext_resource type="Texture2D" uid="uid://c1re0wpy0u73" path="res://assets/boy mort.png" id="2_s1rgi"]
-[ext_resource type="Texture2D" uid="uid://dulw1xq8i4uf5" path="res://assets/boy fata.png" id="3_j23h2"]
-[ext_resource type="Texture2D" uid="uid://d3i510dwdxdy" path="res://assets/boy stanga sare.png" id="4_0j2ni"]
-[ext_resource type="Texture2D" uid="uid://bw8hbu8cfwemg" path="res://assets/boy_dreapta_sare.png" id="5_v0k0e"]
-[ext_resource type="Texture2D" uid="uid://bg66yw46881xs" path="res://assets/boy stanga.png" id="6_5wa8t"]
-[ext_resource type="Texture2D" uid="uid://b5xa3xs15b155" path="res://assets/boy dreapta.png" id="7_p7tob"]
+[ext_resource type="Texture2D" uid="uid://bexw0f78qjprt" path="res://assets/boy/boy mort.png" id="2_s1rgi"]
+[ext_resource type="Texture2D" uid="uid://dkpxtcy7b4hwo" path="res://assets/boy/boy fata.png" id="3_s1rgi"]
+[ext_resource type="Texture2D" uid="uid://djtkcu0yaas64" path="res://assets/boy/boy stanga sare.png" id="4_j23h2"]
+[ext_resource type="Texture2D" uid="uid://yvkq5jy78a20" path="res://assets/boy/boy_dreapta_sare.png" id="5_j23h2"]
+[ext_resource type="Texture2D" uid="uid://chl8wsmsdq2b7" path="res://assets/boy/boy spate.png" id="6_0j2ni"]
+[ext_resource type="Texture2D" uid="uid://qq561n1dubml" path="res://assets/boy/boy stanga.png" id="7_v0k0e"]
+[ext_resource type="Texture2D" uid="uid://b3cfbbawcccpn" path="res://assets/boy/boy dreapta.png" id="8_v0k0e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vlldt"]
 size = Vector2(49, 100)
@@ -23,7 +24,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_j23h2")
+"texture": ExtResource("3_s1rgi")
 }],
 "loop": true,
 "name": &"idle",
@@ -31,7 +32,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_0j2ni")
+"texture": ExtResource("4_j23h2")
 }],
 "loop": true,
 "name": &"jump left",
@@ -39,7 +40,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_v0k0e")
+"texture": ExtResource("5_j23h2")
 }],
 "loop": true,
 "name": &"jump right",
@@ -47,7 +48,15 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_5wa8t")
+"texture": ExtResource("6_0j2ni")
+}],
+"loop": true,
+"name": &"stat spate",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_v0k0e")
 }],
 "loop": true,
 "name": &"walk left",
@@ -55,82 +64,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_p7tob")
+"texture": ExtResource("8_v0k0e")
 }],
 "loop": true,
 "name": &"walk right",
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_q3lat"]
-resource_name = "death"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CollisionShape2D/AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_tok1r"]
-resource_name = "idle"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CollisionShape2D/AnimatedSprite2D:animation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CollisionShape2D/AnimatedSprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ddoul"]
-_data = {
-&"death": SubResource("Animation_q3lat"),
-&"idle": SubResource("Animation_tok1r")
-}
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_vlldt")
 metadata/_edit_vertical_guides_ = [-803.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(13.5, 380)
 shape = SubResource("RectangleShape2D_vlldt")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D"]
-position = Vector2(5.5, 1)
-scale = Vector2(0.20384614, 0.189)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(5.018753, 2)
+scale = Vector2(0.19612284, 0.189)
 sprite_frames = SubResource("SpriteFrames_3qydi")
-animation = &"walk left"
+animation = &"walk right"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.7, 0.7)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_ddoul")
-}
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
-anim_player = NodePath("../AnimationPlayer")
