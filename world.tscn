@@ -1,21 +1,8 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=11 format=4 uid="uid://ckavqb25bdaul"]
-
-[ext_resource type="PackedScene" uid="uid://5wfaiuixi4mu" path="res://Player/Player.tscn" id="1_f3sb7"]
-[ext_resource type="PackedScene" uid="uid://dntrdxjmytwn4" path="res://parallax_background.tscn" id="1_fj7yv"]
-[ext_resource type="Texture2D" uid="uid://cmys6fox7dgdy" path="res://assets/ground.png" id="1_tlwt5"]
-[ext_resource type="PackedScene" uid="uid://yvk25l32pebt" path="res://shadow.tscn" id="3_tlwt5"]
-=======
 [gd_scene load_steps=32 format=4 uid="uid://ckavqb25bdaul"]
 
 [ext_resource type="PackedScene" uid="uid://5wfaiuixi4mu" path="res://Player/Player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://dntrdxjmytwn4" path="res://parallax_background.tscn" id="1_fj7yv"]
-[ext_resource type="PackedScene" uid="uid://yvk25l32pebt" path="res://shadow.tscn" id="3_036b0"]
-[ext_resource type="Texture2D" uid="uid://civ4npbsmwnru" path="res://assets/ground_3.png" id="3_tlwt5"]
-[ext_resource type="Texture2D" uid="uid://vnyc2bs3jooo" path="res://assets/Collectibles/Collectibles/coin/3.png" id="4_aqk2v"]
-[ext_resource type="Script" uid="uid://dr7pvmraicpl2" path="res://portal.gd" id="6_pkg7o"]
-[ext_resource type="Texture2D" uid="uid://dis52n3ttbxfx" path="res://assets/Dimensional_Portal.png" id="7_gbfbk"]
->>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://cmys6fox7dgdy" path="res://assets/ground.png" id="1_tlwt5"]
 
 [sub_resource type="GDScript" id="GDScript_tlwt5"]
 
@@ -199,97 +186,8 @@ shape = SubResource("RectangleShape2D_tlwt5")
 position = Vector2(5628, -257)
 shape = SubResource("RectangleShape2D_aqk2v")
 
-<<<<<<< Updated upstream
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD5////AAAAAAIAAAD5//3/AAAAAAIAAAD5//7/AAAAAAIAAAD5//z/AAAAAAIAAAD5/wAAAAAAAAIAAAD5//v/AAAAAAIAAAD4/wAAAAAAAAIAAAD1//v/AAAAAAIAAAD1//z/AAAAAAIAAAD1//3/AAAAAAIAAAD1//7/AAAAAAIAAAD1////AAAAAAIAAAD1/wAAAAAAAAIAAAD2//v/AAAAAAIAAAD2//z/AAAAAAIAAAD2//3/AAAAAAIAAAD2//7/AAAAAAIAAAD2////AAAAAAIAAAD2/wAAAAAAAAIAAAD3//v/AAAAAAIAAAD3//z/AAAAAAIAAAD3//3/AAAAAAIAAAD3//7/AAAAAAIAAAD3////AAAAAAIAAAD3/wAAAAAAAAIAAAD4//v/AAAAAAIAAAD4//z/AAAAAAIAAAD4//3/AAAAAAIAAAD4//7/AAAAAAIAAAD4////AAAAAAIAAAA=")
 tile_set = SubResource("TileSet_aqk2v")
 rendering_quadrant_size = 128
 physics_quadrant_size = 128
-
-[node name="shadow" parent="." instance=ExtResource("3_tlwt5")]
-position = Vector2(892, -262)
-damage = 25
-=======
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(617, -89.625)
-shape = SubResource("RectangleShape2D_dwbse")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(681, -309)
-shape = SubResource("RectangleShape2D_dwbse")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(681, -538)
-shape = SubResource("RectangleShape2D_pkg7o")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1000, -410)
-shape = SubResource("RectangleShape2D_pkg7o")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1064, -410)
-shape = SubResource("RectangleShape2D_pkg7o")
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1901, -27)
-shape = SubResource("RectangleShape2D_pkg7o")
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1936.5, -109.25)
-shape = SubResource("RectangleShape2D_gbfbk")
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2031, -168.09375)
-shape = SubResource("RectangleShape2D_ioo17")
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1985, 3)
-shape = SubResource("RectangleShape2D_ioo17")
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2097, -232)
-shape = SubResource("RectangleShape2D_ioo17")
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2160, -296)
-shape = SubResource("RectangleShape2D_ioo17")
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2228, -65)
-shape = SubResource("RectangleShape2D_wse8f")
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(2107, 3)
-shape = SubResource("RectangleShape2D_ic0uy")
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(3529, -245.5)
-shape = SubResource("RectangleShape2D_k3n1d")
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(5130.5, 43)
-shape = SubResource("RectangleShape2D_2o6r5")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(997.5, -154.5)
-shape = SubResource("RectangleShape2D_hiqwa")
-
-[node name="Node" type="Node" parent="."]
-script = ExtResource("6_pkg7o")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Node"]
-position = Vector2(6726, 486)
-scale = Vector2(7.812488, 5.7187505)
-sprite_frames = SubResource("SpriteFrames_2u3nc")
-animation = &"portal idle"
-frame_progress = 0.9797469
-
-[node name="Area2D" type="Area2D" parent="Node"]
-position = Vector2(1410, 561)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Area2D"]
-position = Vector2(5325, -71.75)
-shape = SubResource("RectangleShape2D_70uel")
-
-[connection signal="body_entered" from="Node/Area2D" to="Node" method="_on_area_2d_body_entered"]
->>>>>>> Stashed changes
