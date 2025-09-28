@@ -1,14 +1,16 @@
 extends CharacterBody2D
 
 @export var hp= 100
-const SPEED = 300.0
+const SPEED = 320.0
 const JUMP_VELOCITY = -500.0
 
 @onready var enemy = $"../shadow"
 
 @onready var health_bar = $HealthBar
 
-@onready var anim = get_node("AnimatedSprite2D")
+@onready var anim = get_node("CollisionShape2D/AnimatedSprite2D")
+ 
+
 
 func _ready() -> void:
 	health_bar.value = hp
