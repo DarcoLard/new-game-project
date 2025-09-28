@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=4 uid="uid://ckavqb25bdaul"]
+[gd_scene load_steps=11 format=4 uid="uid://ckavqb25bdaul"]
 
 [ext_resource type="PackedScene" uid="uid://5wfaiuixi4mu" path="res://Player/Player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://dntrdxjmytwn4" path="res://parallax_background.tscn" id="1_fj7yv"]
 [ext_resource type="Texture2D" uid="uid://cmys6fox7dgdy" path="res://assets/ground.png" id="1_tlwt5"]
+[ext_resource type="PackedScene" uid="uid://yvk25l32pebt" path="res://shadow.tscn" id="3_tlwt5"]
 
 [sub_resource type="GDScript" id="GDScript_tlwt5"]
 
@@ -120,3 +121,7 @@ tile_map_data = PackedByteArray("AAD5////AAAAAAIAAAD5//3/AAAAAAIAAAD5//7/AAAAAAI
 tile_set = SubResource("TileSet_aqk2v")
 rendering_quadrant_size = 128
 physics_quadrant_size = 128
+
+[node name="shadow" parent="." instance=ExtResource("3_tlwt5")]
+position = Vector2(892, -262)
+damage = 25
