@@ -87,7 +87,6 @@ radius = 578.05536
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2o5g"]
 size = Vector2(87, 110)
-radius = 529.0085
 
 [node name="shadow" type="CharacterBody2D"]
 script = SubResource("GDScript_ov1mx")
