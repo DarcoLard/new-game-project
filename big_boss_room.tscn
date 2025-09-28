@@ -1,9 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://b811qxnsbefur"]
+[gd_scene load_steps=6 format=3 uid="uid://b811qxnsbefur"]
 
 [ext_resource type="PackedScene" uid="uid://m2r55ie7h8xo" path="res://final_boss_background.tscn" id="1_54cln"]
+[ext_resource type="PackedScene" uid="uid://l565vm1bbrtv" path="res://bossman.tscn" id="2_r1cac"]
+[ext_resource type="PackedScene" uid="uid://5wfaiuixi4mu" path="res://Player/Player.tscn" id="3_q7lxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2gt0"]
+size = Vector2(6095, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1cac"]
+size = Vector2(162, 201.5)
 
 [node name="Big Boss Room" type="Node2D"]
 
 [node name="Background" type="Node2D" parent="."]
 
 [node name="Final boss background" parent="." instance=ExtResource("1_54cln")]
+position = Vector2(-47, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1081, 990)
+shape = SubResource("RectangleShape2D_m2gt0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D"]
+position = Vector2(5325, -71.75)
+shape = SubResource("RectangleShape2D_r1cac")
+
+[node name="bossman" parent="." instance=ExtResource("2_r1cac")]
+position = Vector2(-81, 384)
+
+[node name="Player" parent="." instance=ExtResource("3_q7lxs")]
+position = Vector2(-463, 680)

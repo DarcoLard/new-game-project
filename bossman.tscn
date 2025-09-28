@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=3 uid="uid://l565vm1bbrtv"]
+
+[ext_resource type="Texture2D" uid="uid://dh0hn8sl53ey1" path="res://assets/Crystal Knight.png" id="1_ph25u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3gwd"]
+size = Vector2(395, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph25u"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(2, 470, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3gwd"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(75, 470, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp3am"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(148, 470, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nahk4"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(221, 470, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w14en"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(294, 470, 73, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y36o0"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(2, 384, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odw8v"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(76, 384, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncemp"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(150, 384, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nijjp"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(224, 384, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gqgx"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(298, 384, 74, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aasx3"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(17, 0, 63, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ksl7"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(80, 0, 63, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbghw"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(143, 0, 63, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbg6k"]
+atlas = ExtResource("1_ph25u")
+region = Rect2(206, 0, 63, 74)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n74ky"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph25u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3gwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp3am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nahk4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w14en")
+}],
+"loop": true,
+"name": &"attack dreapta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y36o0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odw8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncemp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nijjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gqgx")
+}],
+"loop": true,
+"name": &"attack stanga",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aasx3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ksl7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbghw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbg6k")
+}],
+"loop": true,
+"name": &"boss static",
+"speed": 5.0
+}]
+
+[node name="bossman" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(202.5, 166)
+shape = SubResource("RectangleShape2D_g3gwd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(211, 153)
+scale = Vector2(4.893835, 3.781915)
+sprite_frames = SubResource("SpriteFrames_n74ky")
+animation = &"attack dreapta"
