@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://m2r55ie7h8xo"]
+
+[ext_resource type="Script" uid="uid://c54cf0syv3yb8" path="res://final_boss_background.gd" id="1_cgsup"]
+[ext_resource type="Texture2D" uid="uid://b0ri7joj6jbdf" path="res://assets/craftpix-671123-free-halloween-2d-game-backgrounds/PNG/2_game_background/2_game_background.png" id="1_ommdn"]
+
+[node name="Final boss background" type="Node2D"]
+script = ExtResource("1_cgsup")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="2GameBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_ommdn")
+
+[node name="2GameBackground2" type="Sprite2D" parent="."]
+position = Vector2(-960, 540)
+texture = ExtResource("1_ommdn")
+
+[node name="2GameBackground3" type="Sprite2D" parent="."]
+position = Vector2(2880, 540)
+texture = ExtResource("1_ommdn")

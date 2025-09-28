@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b811qxnsbefur"]
+
+[ext_resource type="PackedScene" uid="uid://m2r55ie7h8xo" path="res://final_boss_background.tscn" id="1_54cln"]
+
+[node name="Big Boss Room" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="Final boss background" parent="." instance=ExtResource("1_54cln")]
